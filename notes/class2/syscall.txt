@@ -1,0 +1,648 @@
+execve("/usr/bin/gcc", ["gcc", "-c", "minimal.S"], 0x7ffc12b31538 /* 32 vars */) = 0
+brk(NULL)                               = 0x1665000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fff5c492870) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=45840, ...}) = 0
+mmap(NULL, 45840, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc8bf3bc000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc8bf3ba000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc8bf1c8000
+mprotect(0x7fc8bf1ed000, 1847296, PROT_NONE) = 0
+mmap(0x7fc8bf1ed000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7fc8bf1ed000
+mmap(0x7fc8bf365000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7fc8bf365000
+mmap(0x7fc8bf3b0000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7fc8bf3b0000
+mmap(0x7fc8bf3b6000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc8bf3b6000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc8bf1c6000
+arch_prctl(ARCH_SET_FS, 0x7fc8bf3bb600) = 0
+mprotect(0x7fc8bf3b0000, 12288, PROT_READ) = 0
+mprotect(0x516000, 12288, PROT_READ)    = 0
+mprotect(0x7fc8bf3f5000, 4096, PROT_READ) = 0
+munmap(0x7fc8bf3bc000, 45840)           = 0
+brk(NULL)                               = 0x1665000
+brk(0x1686000)                          = 0x1686000
+ioctl(2, TCGETS, 0x7fff5c4926d0)        = -1 ENOTTY (Inappropriate ioctl for device)
+brk(0x16ac000)                          = 0x16ac000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=5699248, ...}) = 0
+mmap(NULL, 5699248, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc8bec56000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+ioctl(2, TCGETS, 0x7fff5c492710)        = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(2, TCGETS, 0x7fff5c492720)        = -1 ENOTTY (Inappropriate ioctl for device)
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x40a520, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_IGN, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=SIG_IGN, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x40a520, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_IGN, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x40a520, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_IGN, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=0x40a520, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[CHLD], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fc8bf20e210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_STACK, {rlim_cur=65536*1024, rlim_max=RLIM64_INFINITY}, NULL) = 0
+access("/home/lijue/.vscode-server/bin/8dfae7a5cd50421d10cd99cb873990460525a898/bin/remote-cli/gcc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/gcc", X_OK)     = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/gcc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/sbin/gcc", X_OK)           = -1 ENOENT (No such file or directory)
+access("/usr/bin/gcc", X_OK)            = 0
+stat("/usr/bin/gcc", {st_mode=S_IFREG|0755, st_size=1154192, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/bin", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+lstat("/usr/bin/gcc", {st_mode=S_IFLNK|0777, st_size=5, ...}) = 0
+readlink("/usr/bin/gcc", "gcc-9", 4095) = 5
+lstat("/usr/bin/gcc-9", {st_mode=S_IFLNK|0777, st_size=22, ...}) = 0
+readlink("/usr/bin/gcc-9", "x86_64-linux-gnu-gcc-9", 4095) = 22
+lstat("/usr/bin/x86_64-linux-gnu-gcc-9", {st_mode=S_IFREG|0755, st_size=1154192, ...}) = 0
+access("/home/lijue/.vscode-server/bin/8dfae7a5cd50421d10cd99cb873990460525a898/bin/remote-cli/gcc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/gcc", X_OK)     = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/gcc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/sbin/gcc", X_OK)           = -1 ENOENT (No such file or directory)
+access("/usr/bin/gcc", X_OK)            = 0
+stat("/usr/bin/gcc", {st_mode=S_IFREG|0755, st_size=1154192, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/bin", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+lstat("/usr/bin/gcc", {st_mode=S_IFLNK|0777, st_size=5, ...}) = 0
+readlink("/usr/bin/gcc", "gcc-9", 4095) = 5
+lstat("/usr/bin/gcc-9", {st_mode=S_IFLNK|0777, st_size=22, ...}) = 0
+readlink("/usr/bin/gcc-9", "x86_64-linux-gnu-gcc-9", 4095) = 22
+lstat("/usr/bin/x86_64-linux-gnu-gcc-9", {st_mode=S_IFREG|0755, st_size=1154192, ...}) = 0
+access("minimal.S", F_OK)               = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/9/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/9/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/9/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/9/", X_OK) = 0
+access("/tmp", R_OK|W_OK|X_OK)          = 0
+getpid()                                = 3461279
+openat(AT_FDCWD, "/tmp/ccRYBPcT.s", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+close(3)                                = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/cc1", {st_mode=S_IFREG|0755, st_size=25654616, ...}) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/9/cc1", X_OK) = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+vfork(strace: Process 3461280 attached
+ <unfinished ...>
+[pid 3461280] close(3)                  = 0
+[pid 3461280] execve("/usr/lib/gcc/x86_64-linux-gnu/9/cc1", ["/usr/lib/gcc/x86_64-linux-gnu/9/"..., "-E", "-lang-asm", "-quiet", "-imultiarch", "x86_64-linux-gnu", "minimal.S", "-mtune=generic", "-march=x86-64", "-fasynchronous-unwind-tables", "-fstack-protector-strong", "-Wformat", "-Wformat-security", "-fstack-clash-protection", "-fcf-protection", "-fno-directives-only", "-o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */ <unfinished ...>
+[pid 3461279] <... vfork resumed>)      = 3461280
+[pid 3461279] close(4)                  = 0
+[pid 3461279] read(3, "", 16)           = 0
+[pid 3461280] <... execve resumed>)     = 0
+[pid 3461279] close(3)                  = 0
+[pid 3461280] brk(NULL <unfinished ...>
+[pid 3461279] wait4(3461280,  <unfinished ...>
+[pid 3461280] <... brk resumed>)        = 0x267b000
+[pid 3461280] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe21079e60) = -1 EINVAL (Invalid argument)
+[pid 3461280] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=45840, ...}) = 0
+[pid 3461280] mmap(NULL, 45840, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f650becb000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libisl.so.22", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`z\4\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=1773112, ...}) = 0
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650bec9000
+[pid 3461280] mmap(NULL, 1775064, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650bd17000
+[pid 3461280] mmap(0x7f650bd5e000, 1093632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x47000) = 0x7f650bd5e000
+[pid 3461280] mmap(0x7f650be69000, 380928, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x152000) = 0x7f650be69000
+[pid 3461280] mmap(0x7f650bec6000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ae000) = 0x7f650bec6000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmpc.so.3", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0G\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=97360, ...}) = 0
+[pid 3461280] mmap(NULL, 2192568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650baff000
+[pid 3461280] mprotect(0x7f650bb16000, 2093056, PROT_NONE) = 0
+[pid 3461280] mmap(0x7f650bd15000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f650bd15000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmpfr.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\247\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=523280, ...}) = 0
+[pid 3461280] mmap(NULL, 525216, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650ba7e000
+[pid 3461280] mmap(0x7f650ba88000, 401408, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f650ba88000
+[pid 3461280] mmap(0x7f650baea000, 73728, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6c000) = 0x7f650baea000
+[pid 3461280] mmap(0x7f650bafc000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7d000) = 0x7f650bafc000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgmp.so.10", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\242\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=534880, ...}) = 0
+[pid 3461280] mmap(NULL, 537024, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650b9fa000
+[pid 3461280] mprotect(0x7f650ba04000, 491520, PROT_NONE) = 0
+[pid 3461280] mmap(0x7f650ba04000, 393216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f650ba04000
+[pid 3461280] mmap(0x7f650ba64000, 94208, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6a000) = 0x7f650ba64000
+[pid 3461280] mmap(0x7f650ba7c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x81000) = 0x7f650ba7c000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \22\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=18816, ...}) = 0
+[pid 3461280] mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650b9f4000
+[pid 3461280] mmap(0x7f650b9f5000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f650b9f5000
+[pid 3461280] mmap(0x7f650b9f7000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f650b9f7000
+[pid 3461280] mmap(0x7f650b9f8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f650b9f8000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\"\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=108936, ...}) = 0
+[pid 3461280] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650b9d8000
+[pid 3461280] mprotect(0x7f650b9da000, 98304, PROT_NONE) = 0
+[pid 3461280] mmap(0x7f650b9da000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f650b9da000
+[pid 3461280] mmap(0x7f650b9eb000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f650b9eb000
+[pid 3461280] mmap(0x7f650b9f2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f650b9f2000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\363\0\0\0\0\0\0"..., 832) = 832
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=1369352, ...}) = 0
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650b9d6000
+[pid 3461280] mmap(NULL, 1368336, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650b887000
+[pid 3461280] mmap(0x7f650b896000, 684032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7f650b896000
+[pid 3461280] mmap(0x7f650b93d000, 618496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb6000) = 0x7f650b93d000
+[pid 3461280] mmap(0x7f650b9d4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14c000) = 0x7f650b9d4000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+[pid 3461280] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 3461280] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+[pid 3461280] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+[pid 3461280] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 3461280] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+[pid 3461280] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+[pid 3461280] mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f650b695000
+[pid 3461280] mprotect(0x7f650b6ba000, 1847296, PROT_NONE) = 0
+[pid 3461280] mmap(0x7f650b6ba000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f650b6ba000
+[pid 3461280] mmap(0x7f650b832000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f650b832000
+[pid 3461280] mmap(0x7f650b87d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f650b87d000
+[pid 3461280] mmap(0x7f650b883000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f650b883000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650b692000
+[pid 3461280] arch_prctl(ARCH_SET_FS, 0x7f650b692ac0) = 0
+[pid 3461280] mprotect(0x7f650b87d000, 12288, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650b9d4000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650b9f2000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650b9f8000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650ba7c000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650bafc000, 8192, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650bd15000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650bec6000, 4096, PROT_READ) = 0
+[pid 3461280] mprotect(0x1c69000, 12288, PROT_READ) = 0
+[pid 3461280] mprotect(0x7f650bf04000, 4096, PROT_READ) = 0
+[pid 3461280] munmap(0x7f650becb000, 45840) = 0
+[pid 3461280] brk(NULL)                 = 0x267b000
+[pid 3461280] brk(0x269c000)            = 0x269c000
+[pid 3461280] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=65536*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=5699248, ...}) = 0
+[pid 3461280] mmap(NULL, 5699248, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f650b122000
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+[pid 3461280] read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 3461280] read(3, "", 4096)         = 0
+[pid 3461280] close(3)                  = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/gcc-9.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461280] ioctl(2, TCGETS, 0x7ffe21079cc0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 3461280] rt_sigaction(SIGSEGV, {sa_handler=0xa68b10, sa_mask=[SEGV], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f650b6db210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461280] rt_sigaction(SIGILL, {sa_handler=0xa68b10, sa_mask=[ILL], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f650b6db210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461280] rt_sigaction(SIGBUS, {sa_handler=0xa68b10, sa_mask=[BUS], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f650b6db210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461280] rt_sigaction(SIGABRT, {sa_handler=0xa68b10, sa_mask=[ABRT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f650b6db210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461280] rt_sigaction(SIGFPE, {sa_handler=0xa68b10, sa_mask=[FPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f650b6db210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461280] mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650bf03000
+[pid 3461280] mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650b101000
+[pid 3461280] brk(0x26c0000)            = 0x26c0000
+[pid 3461280] mmap(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650af01000
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650bed5000
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650bed3000
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650bed1000
+[pid 3461280] mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650becd000
+[pid 3461280] sysinfo({uptime=10296266, loads=[0, 576, 0], totalram=48930906112, freeram=4881072128, sharedram=16027648, bufferram=1403875328, totalswap=0, freeswap=0, procs=942, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+[pid 3461280] prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+[pid 3461280] sysinfo({uptime=10296266, loads=[0, 576, 0], totalram=48930906112, freeram=4881072128, sharedram=16027648, bufferram=1403875328, totalswap=0, freeswap=0, procs=942, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+[pid 3461280] prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+[pid 3461280] prlimit64(0, RLIMIT_RSS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+[pid 3461280] sysinfo({uptime=10296266, loads=[0, 576, 0], totalram=48930906112, freeram=4881072128, sharedram=16027648, bufferram=1403875328, totalswap=0, freeswap=0, procs=942, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+[pid 3461280] prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+[pid 3461280] brk(0x26e8000)            = 0x26e8000
+[pid 3461280] ioctl(2, TCGETS, 0x7ffe21079cd0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 3461280] brk(0x270f000)            = 0x270f000
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/x86_64-linux-gnu", 0x7ffe21078bf0) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed", 0x7ffe21078bf0) = -1 ENOENT (No such file or directory)
+[pid 3461280] access("/usr/lib/gcc/x86_64-linux-gnu/9/", X_OK) = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/x86_64-linux-gnu", 0x7ffe21078bf0) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] stat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] stat("/usr/local/include/x86_64-linux-gnu", 0x7ffe21079c10) = -1 ENOENT (No such file or directory)
+[pid 3461280] stat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] stat("/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed", 0x7ffe21079c10) = -1 ENOENT (No such file or directory)
+[pid 3461280] stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include", 0x7ffe21079c10) = -1 ENOENT (No such file or directory)
+[pid 3461280] stat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] stat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/tmp/ccRYBPcT.s", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+[pid 3461280] openat(AT_FDCWD, "minimal.S", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0664, st_size=391, ...}) = 0
+[pid 3461280] read(4, "#include <sys/syscall.h>\n\n.globl"..., 391) = 391
+[pid 3461280] close(4)                  = 0
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650becb000
+[pid 3461280] fstat(3, {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include/stdc-predef.h", 0x7ffe21078b00) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdc-predef.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/stdc-predef.h", 0x7ffe21078b00) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/local/include/stdc-predef.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/stdc-predef.h", 0x7ffe21078b00) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/include/x86_64-linux-gnu/stdc-predef.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/stdc-predef.h", {st_mode=S_IFREG|0644, st_size=2290, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/include/stdc-predef.h", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0644, st_size=2290, ...}) = 0
+[pid 3461280] read(4, "/* Copyright (C) 1991-2020 Free "..., 2290) = 2290
+[pid 3461280] close(4)                  = 0
+[pid 3461280] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f650aeff000
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include/sys", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/gcc/x86_64-linux-gnu/9/include/sys/syscall.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/sys", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/local/include/sys/syscall.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/sys", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/sys/syscall.h", {st_mode=S_IFREG|0644, st_size=1256, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/include/x86_64-linux-gnu/sys/syscall.h", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0644, st_size=1256, ...}) = 0
+[pid 3461280] read(4, "/* Copyright (C) 1995-2020 Free "..., 1256) = 1256
+[pid 3461280] close(4)                  = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include/asm", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/gcc/x86_64-linux-gnu/9/include/asm/unistd.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/asm", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/local/include/asm/unistd.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/asm", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/asm/unistd.h", {st_mode=S_IFREG|0644, st_size=623, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/include/x86_64-linux-gnu/asm/unistd.h", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0644, st_size=623, ...}) = 0
+[pid 3461280] read(4, "/* SPDX-License-Identifier: GPL-"..., 623) = 623
+[pid 3461280] close(4)                  = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include/asm", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/gcc/x86_64-linux-gnu/9/include/asm/unistd_64.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/asm", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/local/include/asm/unistd_64.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/asm", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/asm/unistd_64.h", {st_mode=S_IFREG|0644, st_size=9286, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/include/x86_64-linux-gnu/asm/unistd_64.h", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0644, st_size=9286, ...}) = 0
+[pid 3461280] read(4, "#ifndef _ASM_X86_UNISTD_64_H\n#de"..., 9286) = 9286
+[pid 3461280] close(4)                  = 0
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/lib/gcc/x86_64-linux-gnu/9/include/bits", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/lib/gcc/x86_64-linux-gnu/9/include/bits/syscall.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/local/include/bits", 0x7ffe210788d0) = -1 ENOENT (No such file or directory)
+[pid 3461280] openat(AT_FDCWD, "/usr/local/include/bits/syscall.h", O_RDONLY|O_NOCTTY) = -1 ENOENT (No such file or directory)
+[pid 3461280] lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/bits", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+[pid 3461280] lstat("/usr/include/x86_64-linux-gnu/bits/syscall.h", {st_mode=S_IFREG|0644, st_size=44103, ...}) = 0
+[pid 3461280] openat(AT_FDCWD, "/usr/include/x86_64-linux-gnu/bits/syscall.h", O_RDONLY|O_NOCTTY) = 4
+[pid 3461280] fstat(4, {st_mode=S_IFREG|0644, st_size=44103, ...}) = 0
+[pid 3461280] brk(0x273a000)            = 0x273a000
+[pid 3461280] read(4, "/* Generated at libc build time "..., 44103) = 44103
+[pid 3461280] close(4)                  = 0
+[pid 3461280] brk(0x272f000)            = 0x272f000
+[pid 3461280] write(3, "# 1 \"minimal.S\"\n# 1 \"<built-in>\""..., 958) = 958
+[pid 3461280] close(3)                  = 0
+[pid 3461280] exit_group(0)             = ?
+[pid 3461280] +++ exited with 0 +++
+<... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3461280
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3461280, si_uid=1018, si_status=0, si_utime=0, si_stime=0} ---
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu-as", 0x7fff5c492420) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/as", 0x7fff5c492470) = -1 ENOENT (No such file or directory)
+pipe2([3, 4], O_CLOEXEC)                = 0
+vfork(strace: Process 3461281 attached
+ <unfinished ...>
+[pid 3461281] close(3)                  = 0
+[pid 3461281] execve("/home/lijue/.vscode-server/bin/8dfae7a5cd50421d10cd99cb873990460525a898/bin/remote-cli/as", ["as", "--64", "-o", "minimal.o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */) = -1 ENOENT (No such file or directory)
+[pid 3461281] execve("/usr/local/sbin/as", ["as", "--64", "-o", "minimal.o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */) = -1 ENOENT (No such file or directory)
+[pid 3461281] execve("/usr/local/bin/as", ["as", "--64", "-o", "minimal.o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */) = -1 ENOENT (No such file or directory)
+[pid 3461281] execve("/usr/sbin/as", ["as", "--64", "-o", "minimal.o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */) = -1 ENOENT (No such file or directory)
+[pid 3461281] execve("/usr/bin/as", ["as", "--64", "-o", "minimal.o", "/tmp/ccRYBPcT.s"], 0x1695b00 /* 36 vars */ <unfinished ...>
+[pid 3461279] <... vfork resumed>)      = 3461281
+[pid 3461279] close(4)                  = 0
+[pid 3461279] read(3, "", 16)           = 0
+[pid 3461281] <... execve resumed>)     = 0
+[pid 3461279] close(3)                  = 0
+[pid 3461281] brk(NULL <unfinished ...>
+[pid 3461279] wait4(3461281,  <unfinished ...>
+[pid 3461281] <... brk resumed>)        = 0x560e2479c000
+[pid 3461281] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffca82563e0) = -1 EINVAL (Invalid argument)
+[pid 3461281] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=45840, ...}) = 0
+[pid 3461281] mmap(NULL, 45840, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd33d125000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libopcodes-2.34-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 R\4\0\0\0\0\0"..., 832) = 832
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=1426976, ...}) = 0
+[pid 3461281] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33d123000
+[pid 3461281] mmap(NULL, 1430208, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd33cfc5000
+[pid 3461281] mprotect(0x7fd33d00a000, 155648, PROT_NONE) = 0
+[pid 3461281] mmap(0x7fd33d00a000, 45056, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x45000) = 0x7fd33d00a000
+[pid 3461281] mmap(0x7fd33d015000, 106496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x7fd33d015000
+[pid 3461281] mmap(0x7fd33d030000, 991232, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6a000) = 0x7fd33d030000
+[pid 3461281] mmap(0x7fd33d122000, 704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd33d122000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.34-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000^\4\0\0\0\0\0"..., 832) = 832
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=1319320, ...}) = 0
+[pid 3461281] mmap(NULL, 1338944, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd33ce7e000
+[pid 3461281] mmap(0x7fd33cec0000, 724992, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x42000) = 0x7fd33cec0000
+[pid 3461281] mmap(0x7fd33cf71000, 225280, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf3000) = 0x7fd33cf71000
+[pid 3461281] mmap(0x7fd33cfa8000, 102400, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x129000) = 0x7fd33cfa8000
+[pid 3461281] mmap(0x7fd33cfc1000, 15936, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd33cfc1000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\"\0\0\0\0\0\0"..., 832) = 832
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=108936, ...}) = 0
+[pid 3461281] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd33ce62000
+[pid 3461281] mprotect(0x7fd33ce64000, 98304, PROT_NONE) = 0
+[pid 3461281] mmap(0x7fd33ce64000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fd33ce64000
+[pid 3461281] mmap(0x7fd33ce75000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7fd33ce75000
+[pid 3461281] mmap(0x7fd33ce7c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7fd33ce7c000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+[pid 3461281] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 3461281] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+[pid 3461281] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+[pid 3461281] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 3461281] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+[pid 3461281] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+[pid 3461281] mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd33cc70000
+[pid 3461281] mprotect(0x7fd33cc95000, 1847296, PROT_NONE) = 0
+[pid 3461281] mmap(0x7fd33cc95000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7fd33cc95000
+[pid 3461281] mmap(0x7fd33ce0d000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7fd33ce0d000
+[pid 3461281] mmap(0x7fd33ce58000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7fd33ce58000
+[pid 3461281] mmap(0x7fd33ce5e000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd33ce5e000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \22\0\0\0\0\0\0"..., 832) = 832
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=18816, ...}) = 0
+[pid 3461281] mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd33cc6a000
+[pid 3461281] mmap(0x7fd33cc6b000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fd33cc6b000
+[pid 3461281] mmap(0x7fd33cc6d000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fd33cc6d000
+[pid 3461281] mmap(0x7fd33cc6e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fd33cc6e000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33cc68000
+[pid 3461281] arch_prctl(ARCH_SET_FS, 0x7fd33cc69040) = 0
+[pid 3461281] mprotect(0x7fd33ce58000, 12288, PROT_READ) = 0
+[pid 3461281] mprotect(0x7fd33cc6e000, 4096, PROT_READ) = 0
+[pid 3461281] mprotect(0x7fd33ce7c000, 4096, PROT_READ) = 0
+[pid 3461281] mprotect(0x7fd33cfa8000, 73728, PROT_READ) = 0
+[pid 3461281] mprotect(0x7fd33d030000, 987136, PROT_READ) = 0
+[pid 3461281] mprotect(0x560e23f34000, 278528, PROT_READ) = 0
+[pid 3461281] mprotect(0x7fd33d15e000, 4096, PROT_READ) = 0
+[pid 3461281] munmap(0x7fd33d125000, 45840) = 0
+[pid 3461281] getrusage(RUSAGE_SELF, {ru_utime={tv_sec=0, tv_usec=0}, ru_stime={tv_sec=0, tv_usec=2300}, ...}) = 0
+[pid 3461281] rt_sigaction(SIGSEGV, {sa_handler=0x560e23eee4c0, sa_mask=[SEGV], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd33ccb6210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461281] rt_sigaction(SIGILL, {sa_handler=0x560e23eee4c0, sa_mask=[ILL], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd33ccb6210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461281] rt_sigaction(SIGBUS, {sa_handler=0x560e23eee4c0, sa_mask=[BUS], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd33ccb6210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461281] rt_sigaction(SIGABRT, {sa_handler=0x560e23eee4c0, sa_mask=[ABRT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd33ccb6210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461281] rt_sigaction(SIGFPE, {sa_handler=0x560e23eee4c0, sa_mask=[FPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd33ccb6210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[pid 3461281] brk(NULL)                 = 0x560e2479c000
+[pid 3461281] brk(0x560e247bd000)       = 0x560e247bd000
+[pid 3461281] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0644, st_size=5699248, ...}) = 0
+[pid 3461281] mmap(NULL, 5699248, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd33c6f8000
+[pid 3461281] close(3)                  = 0
+[pid 3461281] stat("minimal.o", {st_mode=S_IFREG|0664, st_size=920, ...}) = 0
+[pid 3461281] stat("/tmp/ccRYBPcT.s", {st_mode=S_IFREG|0600, st_size=958, ...}) = 0
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c677000
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c5f6000
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c575000
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c4f4000
+[pid 3461281] prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=65535, rlim_max=65535}) = 0
+[pid 3461281] stat("minimal.o", {st_mode=S_IFREG|0664, st_size=920, ...}) = 0
+[pid 3461281] lstat("minimal.o", {st_mode=S_IFREG|0664, st_size=920, ...}) = 0
+[pid 3461281] unlink("minimal.o")       = 0
+[pid 3461281] openat(AT_FDCWD, "minimal.o", O_RDWR|O_CREAT|O_TRUNC, 0666) = 3
+[pid 3461281] fcntl(3, F_GETFD)         = 0
+[pid 3461281] fcntl(3, F_SETFD, FD_CLOEXEC) = 0
+[pid 3461281] brk(0x560e247de000)       = 0x560e247de000
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c473000
+[pid 3461281] brk(0x560e247dd000)       = 0x560e247dd000
+[pid 3461281] brk(0x560e247fe000)       = 0x560e247fe000
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c3f2000
+[pid 3461281] brk(0x560e247fd000)       = 0x560e247fd000
+[pid 3461281] openat(AT_FDCWD, "/tmp/ccRYBPcT.s", O_RDONLY) = 4
+[pid 3461281] fstat(4, {st_mode=S_IFREG|0600, st_size=958, ...}) = 0
+[pid 3461281] read(4, "# 1 \"minimal.S\"\n# 1 \"<built-in>\""..., 4096) = 958
+[pid 3461281] read(4, "", 28672)        = 0
+[pid 3461281] close(4)                  = 0
+[pid 3461281] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd33c371000
+[pid 3461281] munmap(0x7fd33c371000, 528384) = 0
+[pid 3461281] fstat(3, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "", 312)          = 0
+[pid 3461281] lseek(3, 312, SEEK_CUR)   = 312
+[pid 3461281] write(3, "\0st\0ed\0_start\0", 14) = 14
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 326
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 4
+[pid 3461281] fstat(4, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+[pid 3461281] read(4, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 3461281] read(4, "", 4096)         = 0
+[pid 3461281] close(4)                  = 0
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/gas.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 3461281] lseek(3, -262, SEEK_CUR)  = 64
+[pid 3461281] write(3, "H\307\300\1\0\0\0H\307\307\1\0\0\0H\307\306\0\0\0\0H\307\302\34\0\0\0\17\5H\307"..., 74) = 74
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 326
+[pid 3461281] lseek(3, 2, SEEK_CUR)     = 328
+[pid 3461281] write(3, "\21\0\0\0\0\0\0\0\v\0\0\0\1\0\0\0.\0\0\0\0\0\0\0", 24) = 24
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 352
+[pid 3461281] lseek(3, -208, SEEK_CUR)  = 144
+[pid 3461281] write(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\3\0\1\0"..., 168) = 168
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 352
+[pid 3461281] write(3, "\0.symtab\0.strtab\0.shstrtab\0.rela"..., 49) = 49
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] write(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\1\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 64) = 64
+[pid 3461281] lseek(3, 0, SEEK_SET)     = 0
+[pid 3461281] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\1\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 401
+[pid 3461281] lseek(3, 7, SEEK_CUR)     = 408
+[pid 3461281] write(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 512) = 512
+[pid 3461281] close(3)                  = 0
+[pid 3461281] exit_group(0)             = ?
+[pid 3461281] +++ exited with 0 +++
+<... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3461281
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3461281, si_uid=1018, si_status=0, si_utime=0, si_stime=0} ---
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/../lib/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/9/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/.", {st_mode=S_IFDIR|0755, st_size=45056, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/lib/x86_64-linux-gnu/9/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/.", {st_mode=S_IFDIR|0755, st_size=45056, ...}) = 0
+stat("/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/x86_64-linux-gnu/9/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/.", {st_mode=S_IFDIR|0755, st_size=45056, ...}) = 0
+stat("/usr/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/.", 0x7fff5c4925c0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-linux-gnu/9/../../../.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/tmp/ccRYBPcT.s", {st_mode=S_IFREG|0600, st_size=958, ...}) = 0
+unlink("/tmp/ccRYBPcT.s")               = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
