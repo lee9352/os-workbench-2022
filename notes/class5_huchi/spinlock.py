@@ -1,12 +1,12 @@
-class Mutex:
+class Spinlock:
     locked = ''
 
     @thread
     def t1(self):
         while True:
-            while self.locked == '🔒':
-                pass
-            self.locked = '🔒'# 这个代码之所以不对，在于观察锁与上锁是分开的两步，有可能两个线程都能看到没上锁
+            while True:
+                self.locked, seen = '🔒', self.locked  #这一行模拟原子交换
+                if seen != '🔒': break
             cs = True
             del cs
             self.locked = ''
@@ -14,9 +14,9 @@ class Mutex:
     @thread
     def t2(self):
         while True:
-            while self.locked == '🔒':
-                pass
-            self.locked = '🔒'
+            while True:
+                self.locked, seen = '🔒', self.locked
+                if seen != '🔒': break
             cs = True
             del cs
             self.locked = ''
