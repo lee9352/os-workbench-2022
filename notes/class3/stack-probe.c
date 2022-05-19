@@ -1,5 +1,6 @@
 #include "thread.h"
 
+// __thread表示该变量只在线程本地
 __thread char *base, *cur; // thread-local variables
 __thread int id;
 
@@ -14,16 +15,17 @@ void stackoverflow(int n) {
     printf("Stack size of T%d >= %d KB\n", id, sz / 1024);
   }
   //这个递归会一直执行直到栈溢出
-  //每次进入递归，都会有元素入栈，栈指针都会减小
-  //而cur指向最新的栈顶附近
+  //每次进入递归，都会有元素入栈，栈顶指针都会减小
+  //而cur指向最新的栈顶附近的变量
   //溢出前的最后一次输出，可得一个线程的栈空间为8MB
   stackoverflow(n + 1);
 }
 
 void Tprobe(int tid) {
   id = tid;
+  // base指向的是该线程刚刚创建时，位于栈顶附近的变量
   base = (void *)&tid;
-  //通过输出相邻两个线程的栈起始位置，相邻两个线程的base地址间隔也为8MB
+  //通过输出相邻两个线程的栈起始位置，可以大致估计相邻两个线程的base地址间隔，为8MB
   printf("thread%d,base=%p\n",id,base);
   stackoverflow(0);
 }

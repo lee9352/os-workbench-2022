@@ -1,3 +1,4 @@
+// 函数指针，参数问题
 #include <stdio.h>
 
 void func(){
