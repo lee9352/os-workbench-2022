@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
   assert(argc == 2);
   n = atoi(argv[1]);
   setbuf(stdout, NULL);
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 32; i++) {
     create(Tproduce);
     create(Tconsume);
   }

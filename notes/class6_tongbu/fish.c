@@ -8,6 +8,8 @@ struct rule {
   int from, ch, to;
 };
 
+// 画了一个状态机，字母表示状态
+// quota表示当前是否有线程正在打印字符
 struct rule rules[] = {
   { A, '<', B },
   { B, '>', C },
@@ -36,6 +38,10 @@ void fish_before(char ch) {
   pthread_mutex_lock(&lk);
   while (!(next(ch) && quota)) {
     // can proceed only if (next(ch) && quota)
+    // 如果当前没有线程在打印字符，
+    // 且通过next(ch)判断下一个等待的字符正好是该线程负责的，就可以去打印
+    // 如果不是，next会返回0
+    // 条件不满足的线程全都进入同一个条件变量
     pthread_cond_wait(&cond, &lk);
   }
   quota--;
