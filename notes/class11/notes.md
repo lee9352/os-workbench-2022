@@ -4,8 +4,8 @@
 然后才执行内核
 
 内核准备完毕后，会执行第一个用户进程init
-之后所有的进程都由init通过系统调用创建
-init不能返回
+之后所有的进程都由init通过执行**系统调用**创建
+init进程不能返回，否则操作系统会不知道干啥，崩溃了
 
 # 三类主要系统调用 
 - 进程
@@ -14,7 +14,7 @@ fork,execve,exit
 mmap
 - 文件
 open,close,read,write
-mkdir
+mkdir(目录)
 
 ## 其余的系统调用
 网络等
@@ -50,12 +50,12 @@ int main(){
 ```
 p没有申请空间，程序会报segfalut错误
 但会发现printf的输出也没有显示
-如果在hello后面加上\n或者在printf后面加上fflush(stdout)
+如果在hello后面加上\n或者在printf后面加上fflush(stdout)或者在printf前面添加setbuf
 hello又输出出来了
 
 原因在于printf会把字符先暂存在缓冲区
 真正的输出是fflush(stdout)语句完成的
-如果stdout指向的是bash，那它的buffer是一个line buffer(碰到换行符输出？main退出还会输出一次)
+如果stdout指向的是bash，那它的buffer是一个line buffer(碰到换行符时，输出缓冲区里面的内容,main退出还会输出一次)
 如果指向pipe，那就是full buffer(写满一定量之后输出一次)
 
 于是如果把fork-printf的输出与管道连接的话
@@ -76,7 +76,7 @@ main函数返回之后，缓冲区才会输出。
 #### 如果多线程程序的某个线程调用fork会发生什么
 
 ### 通过execve()执行别的进程，不仅仅是复制
-这个调用的本质是重置当前进程的状态机
+这个调用的本质是**重置**当前进程的状态机
 execve(file name,char* argv[],char* envp[])
 第二个参数是新进程的参数，其中argv[0]就是file name
 第三个参数是指定新进程的环境变量
@@ -86,9 +86,19 @@ execve会按照path顺序一个个找可以运行的文件
 
 ### exit
 销毁当前进程
-三种用法，其中exit(0)属于libc的库函数
-它可以调用atexit
+三种用法
 
-直接用exit的系统调用就只会销毁进程
+其中exit(0)属于libc的库函数
+会执行清除缓冲区等操作
+它还可以调用atexit，可以用于在退出时执行某一个函数
+
+_exit(0)
+它会直接执行exit_group终止整个进程(所有线程)
+不执行atexit
+
+syscall(SYS_exit,0)
+它会执行"exit"系统调用终止当前线程
+不执行atexit
+
 
 
