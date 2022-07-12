@@ -46,14 +46,15 @@ struct cmd* parsecmd(char*);
 
 // Minimum runtime library
 long syscall(int num, ...) {
+  // 这里是stdarg可变参数的用法
   va_list ap;
   va_start(ap, num);
-  register long a0 asm ("rax") = num;
-  register long a1 asm ("rdi") = va_arg(ap, long);
+  register long a0 asm ("rax") = num;//num是第1个参数，对应syscall的系统调用编号
+  register long a1 asm ("rdi") = va_arg(ap, long);//ap从第二个参数开始
   register long a2 asm ("rsi") = va_arg(ap, long);
   register long a3 asm ("rdx") = va_arg(ap, long);
   register long a4 asm ("r10") = va_arg(ap, long);
-  va_end(ap);
+  va_end(ap);//参数结束
   asm volatile("syscall"
     : "+r"(a0) : "r"(a1), "r"(a2), "r"(a3), "r"(a4)
     : "memory", "rcx", "r8", "r9", "r11");
