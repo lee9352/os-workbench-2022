@@ -19,7 +19,7 @@ struct move {
   { -1, 0, '^' },
 };
 
-char map[][512] = {
+/*char map[][512] = {
   "#######",
   "#.#.#+#",
   "#.....#",
@@ -27,12 +27,21 @@ char map[][512] = {
   "#...#.#",
   "#######",
   "",
+};*/
+char map[][512] = {
+  "########",
+  "#......#",
+  "#......#",
+  "#+.....#",
+  "########",
+  "",
 };
+int count=1;
 
 void display();
 
 void dfs(int x, int y) {
-  if (map[x][y] == DEST) {
+  if (map[x][y] == DEST && count==17) {
     display();
   } else {
     int nfork = 0;
@@ -43,16 +52,18 @@ void dfs(int x, int y) {
         int pid = fork(); assert(pid >= 0);
         if (pid == 0) { // map[][] copied
           map[x][y] = m->ch;// 这里修改了map，相当于标记了visited，确保不会再次访问
+          count += 1;
           dfs(x1, y1);
           exit(0); // clobbered map[][] discarded
         } else {
           nfork++;
-          waitpid(pid, NULL, 0); // wait here to serialize the search
+          //waitpid(pid, NULL, 0); // wait here to serialize the search
         }
       }
     }
 
     while (nfork--) wait(NULL);
+    //exit(0); 这里加不加exit区别不大，因为dfs返回后一定也会执行上面的exit
   }
 }
 

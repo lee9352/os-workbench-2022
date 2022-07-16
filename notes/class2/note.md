@@ -28,13 +28,18 @@ C程序状态机模型(源代码视角)
 把start变成空函数，可以链接成功，运行得到segmentation fault
 把start函数改成死循环，可以成功运行
 利用gdb调试工具，发现retq执行出错
+    执行完 call之后，栈顶rsp会存放call指令后面一条指令的pc
+    然后进入被调用的函数，会先执行push %rbp,表示存放调用者的栈底
+    接着执行mov %rsp,%rbp，表示在新的函数中，栈底从上一个调用者的栈顶开始
+
+    retq前面通常有一个pop %rbp，这句话表示将栈顶弹出，存入rbp寄存器，于是rbp寄存器就还原为调用者的栈底，然后rsp就会+8，此时栈顶存储的是返回地址
     retq行为：M[rsp]->rip, rsp+8->rsp
     以栈顶元素为地址，去内存中取出函数退出后要跳转的pc赋值给pc寄存器，栈顶退8字节
     打印rsp，发现rsp为1，执行retq提示：cannot access addr 1
     需要找到syscall，正确退出程序
 我猜编译器只对main函数的return使用syscall退出**猜错了**
 那就应该是libc啥的设定好了初始状态，以及退出函数，然后再把main函数压栈。main执行完毕出栈后，就进入了退出代码
-syscall在libc中实现
+syscall在libc中调用
 
 
 ### 两种视角转换，就是编译器
