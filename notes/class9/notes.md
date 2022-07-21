@@ -17,3 +17,14 @@ cpu上电会有reset信号设置rip寄存器(就是pc寄存器)
 ## UEFI
 磁盘必须预留FAT32分区
 支持更多设备驱动(比如在bios里面可以用鼠标)
+
+
+# Lab0跑通
+把os-workbench-2022切换到L0分支(在~/os/os-workbench-2022里面)
+进入amgame文件夹运行make，make全过程记录在amgame/build/make.log里面
+然后在docker里面执行命令qemu-system-x86_64 -drive format=raw,file=amgame-x86_64-qemu即可
+
+## thread-os.c
+其实在L0分支下新建一个文件夹， 把thread-os.c放进去，然后修改一下amgame底下的makefile，就能生成thread-os了
+
+但是由于我没有实现klib底下的printf，所以暂时不能正确的执行
