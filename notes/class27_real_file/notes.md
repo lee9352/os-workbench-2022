@@ -77,6 +77,9 @@ Short file names passed to the file system are always converted to upper case an
 
 ## ext2
 相比FAT32，在磁盘里单独开辟空间存放metadata，就是书中的inode
+
+空闲空间用bitmap
+
 inode里面负责存放指针
 大部分指针直接指向数据块(针对小文件)
 **这里与FAT32不同的点在于，属于该文件每一个块都有一个单独的指针负责索引，而FAT32则是链表形式**
